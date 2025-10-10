@@ -18,19 +18,29 @@
 
         function App() {
 
-                const [numero, setNumero] = React.useState(0);
+            const [numero, setNumero] = React.useState(0);
+
+            const diminuir = () => {
+                setNumero((atual) => atual - 1);
+                setNumero((atual) => atual - 1);
+            }
+
+            const aumentar = () => {
+                setNumero((atual) => atual + 1);
+                setNumero((atual) => atual + 1);
+            }
 
             return (
                 <f>
-                    <button onClick={() => setNumero(numero + 1)}>+</button>
+                    <button onClick={() => aumentar}>+</button>
                     <h1 className="roxo">{numero}</h1>
-                    <button onClick={() => setNumero(numero - 1)}>-</button>
+                    <button onClick={() => diminuir}>-</button>
                 </f>
             );
         }
 
         const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<App />);
+        root.render(<App />);
     </script>
 </body>
 
